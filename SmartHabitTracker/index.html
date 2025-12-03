@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="./">
+  <title>Smart Habit Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: 24 100% 50%;
+      --primary-hover: 24 100% 45%;
+      --primary-light: 24 100% 95%;
+      --secondary: 160 84% 39%;
+      --secondary-light: 160 84% 95%;
+      --accent: 280 70% 50%;
+      --success: 160 84% 39%;
+      --danger: 0 84% 60%;
+      --warning: 38 92% 50%;
+      --background: 30 20% 96%;
+      --surface: 0 0% 100%;
+      --surface-dark: 220 20% 14%;
+      --foreground: 220 20% 14%;
+      --muted: 220 10% 50%;
+      --border: 220 20% 90%;
+      --radius: 1rem;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif']
+            },
+            colors: {
+              primary: { DEFAULT: 'hsl(var(--primary))', hover: 'hsl(var(--primary-hover))', light: 'hsl(var(--primary-light))' },
+              secondary: { DEFAULT: 'hsl(var(--secondary))', light: 'hsl(var(--secondary-light))' },
+              accent: 'hsl(var(--accent))',
+              success: 'hsl(var(--success))',
+              danger: 'hsl(var(--danger))',
+              warning: 'hsl(var(--warning))',
+              background: 'hsl(var(--background))',
+              surface: { DEFAULT: 'hsl(var(--surface))', dark: 'hsl(var(--surface-dark))' },
+              foreground: 'hsl(var(--foreground))',
+              muted: 'hsl(var(--muted))',
+              border: 'hsl(var(--border))',
+            },
+            borderRadius: { DEFAULT: 'var(--radius)', xl: '1.25rem', '2xl': '1.5rem', '3xl': '2rem' }
+          }
+        }
+      }
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
